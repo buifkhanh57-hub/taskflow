@@ -1,15 +1,29 @@
 {
-  "name": "ts-utils-kit",
+  "name": "taskflow",
   "version": "1.0.0",
-  "description": "Small dependency-free TypeScript utility library",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "tsc && node dist/index.js"
+  "description": "A zero-dependency task management engine and CLI: priorities, tags, projects, natural-language due dates, recurring tasks, streaks, velocity stats and rich terminal reporting.",
+  "type": "module",
+  "bin": {
+    "taskflow": "bin/taskflow.ts"
   },
+  "scripts": {
+    "start": "node bin/taskflow.ts",
+    "test": "node tests/test_dateparse.ts && node tests/test_task.ts && node tests/test_query.ts && node tests/test_storage.ts"
+  },
+  "keywords": [
+    "task",
+    "todo",
+    "cli",
+    "productivity",
+    "gtd",
+    "recurrence",
+    "scheduler",
+    "streaks",
+    "json-storage"
+  ],
+  "author": "Bui Bao Khanh",
   "license": "MIT",
-  "devDependencies": {
-    "typescript": "^5.4.0"
+  "engines": {
+    "node": ">=24.0.0"
   }
 }
